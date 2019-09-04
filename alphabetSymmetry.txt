@@ -1,0 +1,14 @@
+function solve(arr) {
+  let answer = []
+  let alphab = "abcdefghijklmnopqrstuvwxyz".split('')
+  arr.map(word => {
+    let counter = 0;
+    for (x = 0; x < word.length; x++) {
+      if ((word.toLowerCase()[x]) === (alphab[x])) {
+        counter++
+      }
+    }
+    answer.push(counter)
+  })
+  return answer
+}
